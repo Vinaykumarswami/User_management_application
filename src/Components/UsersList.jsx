@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { API } from "../api/api";
 import { Link } from "react-router-dom";
 
-const UserList = () => {
+const UsersList = () => {
   const [users, setUsers] = useState([]);
 
   const fetchUsers = async () => {
@@ -70,4 +70,4 @@ const UserList = () => {
   );
 };
 
-export default UserList;
+export default UsersList;
