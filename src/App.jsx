@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
+import NavBar from "./Components/NavBar";
 import UserList from "./components/UsersList";
 import AddUser from "./components/AddUser";
 import EditUser from "./components/EditUser";
@@ -10,7 +10,7 @@ import ViewUser from "./components/ViewUser";
 const App = () => {
   return (
     <BrowserRouter>
-      <Navbar />
+      <NavBar />
 
       <Routes>
         <Route path="/" element={<UserList />} />
