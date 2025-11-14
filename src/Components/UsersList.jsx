@@ -6,17 +6,18 @@ const UserList = () => {
   const [users, setUsers] = useState([]);
 
   const fetchUsers = async () => {
-    try {
-      const res = await API.get("/users");
-      setUsers(res.data);
-    } catch (error) {
-      alert("Error fetching users");
-    }
-  };
+  try {
+    const response = await API.get("/users");
+    setUsers(response.data);
+  } catch (error) {
+    console.error("Error fetching users:", error);
+  }
+};
 
-  useEffect(() => {
-    fetchUsers();
-  }, []);
+useEffect(() => {
+  fetchUsers();
+}, []);
+
 
   const deleteUser = async (id) => {
     try {
